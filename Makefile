@@ -44,6 +44,7 @@ dist: clean
 install: all
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
+	@cp -f scripts/* ${DESTDIR}${PREFIX}/bin
 	@cp -f slock ${DESTDIR}${PREFIX}/bin
 	@sudo chown root ${DESTDIR}${PREFIX}/bin/slock
 	@sudo chmod 755 ${DESTDIR}${PREFIX}/bin/slock

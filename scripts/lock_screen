@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if (command -v dunstctl >/dev/null); then
+    dunstctl set-paused true
+fi
+
+slock
+
+if (command -v dunstctl >/dev/null); then
+    dunstctl set-paused false
+fi
